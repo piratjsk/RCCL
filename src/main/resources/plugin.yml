@@ -1,0 +1,9 @@
+name: rccl
+version: @version@
+author: piratjsk
+
+main: net.piratjsk.rccl.RCCL
+
+commands:
+  rccl:
+    description: With 'reload' argument reloads plugin.

@@ -1,0 +1,24 @@
+group 'net.piratjsk'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+    maven { url "https://hub.spigotmc.org/nexus/content/repositories/snapshots/" }
+}
+
+dependencies {
+    compile 'org.bukkit:bukkit:1.10.2-R0.1-SNAPSHOT'
+}
+
+import org.apache.tools.ant.filters.ReplaceTokens
+
+processResources {
+    from('src/main/resources') {
+        filter ReplaceTokens, tokens: [version: version]
+    }
+}
